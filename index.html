@@ -15,7 +15,8 @@
            var msg = $('#msg').text();
            $.ajax({
              url: 'http://inajob.dip.jp/dev/store/write.php',
-             method:'POST',
+             method:'post',
+             data:{msg:msg},
              success:function(o){
                console.log(o);
                alert("saved");
