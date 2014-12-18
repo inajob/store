@@ -10,11 +10,27 @@
              $('.debug').text(o);
            }
          });
+
+         $('.js-send').click(function(){
+           var msg = $('#msg').text();
+           $.ajax({
+             url: 'http://inajob.dip.jp/dev/store/write.php',
+             success:function(o){
+               console.log(o);
+               alert("saved");
+             }
+           });
+
+
+         });
        });
      </script>
   </head>
   <body>
     hello store server
     <div class="debug"></div>
+    <hr>
+    <textarea id="msg"></textarea>
+    <button class="js-send">write</button>
   </body>
 </html>
