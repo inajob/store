@@ -9,7 +9,8 @@
            dataType:'json',
            success:function(o){
              console.log(o);
-             $('.debug').text(o.now);
+             $('.pre').text(o.pre);
+             $('.now').text(o.now);
            }
          });
 
@@ -42,7 +43,8 @@
   </head>
   <body>
     <h1>伝言板 -  誰でも上書きできます</h1>
-    <div class="debug"></div>
+    <div class="pre"></div>
+    <div class="now"></div>
     <hr>
     <textarea id="msg"></textarea>
     <button class="js-send">write</button>
