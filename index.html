@@ -6,9 +6,10 @@
          $.ajax({
            url: 'http://inajob.dip.jp/dev/store/read.php',
            method:'post',
+           type:'json',
            success:function(o){
              console.log(o);
-             $('.debug').text(o);
+             $('.debug').text(o.now);
            }
          });
 
